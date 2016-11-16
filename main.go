@@ -109,7 +109,7 @@ func getCredentials() (string, string, error) {
 		return "", "", err
 	}
 
-	return strings.Trim(user, "\n"), strings.Trim(string(pass), "\n"), nil
+	return strings.TrimSpace(user), strings.TrimSpace(string(pass)), nil
 }
 
 func mapRow(headings, row []string) (map[string]string, error) {
